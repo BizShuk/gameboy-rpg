@@ -1,0 +1,8 @@
+# game1 設定範例 — 複製到 ~/.config/game1/game1.yaml 後修改
+# 優先序: flag > 環境變數 (APP_ADDR / APP_SAVE) > 本檔 > 內建預設
+
+# 監聽位址
+addr: ":8470"
+
+# 玩家進度存檔路徑; 設為 "-" 可停用持久化
+save: "~/.config/game1/data/players.json"

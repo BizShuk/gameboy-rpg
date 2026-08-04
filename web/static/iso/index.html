@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>game1 — Isometric</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 100%; height: 100%; overflow: hidden; background: #1e1e24; }
+  body { font-family: ui-monospace, "SF Mono", Menlo, monospace; color: #e8e8f0; }
+  #viewport { position: absolute; inset: 0; }
+  .overlay { position: absolute; z-index: 10; }
+  #stats { top: 12px; left: 12px; background: rgba(10,10,16,.72); padding: 10px 14px; border-radius: 8px; font-size: 13px; line-height: 1.7; min-width: 230px; }
+  #hpbar { width: 100%; height: 8px; background: #402028; border-radius: 4px; overflow: hidden; margin: 3px 0 5px; }
+  #hpfill { height: 100%; background: #4fd35f; width: 100%; transition: width .15s; }
+  #quest { top: 12px; right: 12px; max-width: 320px; background: rgba(20,24,14,.8); border-left: 3px solid #e8c545; padding: 10px 14px; border-radius: 6px; font-size: 13px; line-height: 1.6; }
+  #quest .title { color: #e8c545; }
+  #toasts { bottom: 74px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 6px; pointer-events: none; }
+  .toast { background: rgba(10,10,16,.82); padding: 6px 14px; border-radius: 14px; font-size: 13px; animation: fadeout 3.2s forwards; }
+  @keyframes fadeout { 0%,75% { opacity: 1 } 100% { opacity: 0 } }
+  #banner { top: 18%; left: 50%; transform: translateX(-50%); font-size: 22px; color: #ffd75e; text-shadow: 0 2px 8px #000; pointer-events: none; opacity: 0; transition: opacity .4s; }
+  #dlg { bottom: 96px; left: 50%; transform: translateX(-50%); width: min(560px, 86vw); background: rgba(12,12,20,.92); border: 1px solid #3a3a4c; border-radius: 10px; padding: 14px 16px; font-size: 14px; line-height: 1.7; display: none; }
+  #dlg .npc { color: #7ec8ff; margin-bottom: 4px; }
+  #dlg .acts { margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; }
+  #dlg button, #shop button, #join button { background: #2e4b8f; color: #fff; border: 0; padding: 6px 14px; border-radius: 6px; font-size: 13px; cursor: pointer; }
+  #dlg button:hover, #shop button:hover, #join button:hover { background: #3a5db3; }
+  #shop { top: 50%; left: 50%; transform: translate(-50%,-50%); width: min(520px, 90vw); max-height: 70vh; overflow: auto; background: rgba(12,12,20,.94); border: 1px solid #3a3a4c; border-radius: 10px; padding: 16px; display: none; }
+  #shop h3 { color: #e8c545; font-size: 14px; margin: 10px 0 6px; }
+  #shop .row { display: flex; justify-content: space-between; align-items: center; padding: 4px 0; font-size: 13px; gap: 8px; }
+  #help { bottom: 12px; left: 50%; transform: translateX(-50%); font-size: 12px; color: #9aa; background: rgba(10,10,16,.6); padding: 6px 14px; border-radius: 14px; }
+  #join { inset: 0; background: rgba(14,14,20,.92); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 14px; }
+  #join input { background: #22222e; color: #fff; border: 1px solid #444; border-radius: 6px; padding: 8px 12px; font-size: 15px; width: 240px; }
+  #join .err { color: #ff8080; font-size: 13px; min-height: 18px; }
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+  <div id="viewport"></div>
+  <div id="stats" class="overlay">
+    <div id="hpline">HP -/-</div>
+    <div id="hpbar"><div id="hpfill"></div></div>
+    <div id="statline">💰 0 · ATK 0 · DEF 0</div>
+    <div id="gearline">Fists / No Armor</div>
+    <div id="invline" style="color:#9aa">1|Pot x0 2|Hi x0 3|Hst x0 4|Pwr x0</div>
+  </div>
+  <div id="quest" class="overlay hidden"><div class="title"></div><div class="obj"></div></div>
+  <div id="banner" class="overlay"></div>
+  <div id="toasts" class="overlay"></div>
+  <div id="dlg" class="overlay"><div class="npc"></div><div class="txt"></div><div class="acts"></div></div>
+  <div id="shop" class="overlay"></div>
+  <div id="help" class="overlay">移動 WASD · 攻擊 J/Space · 互動 E · 道具 1-4 · 商店 B · 決鬥 P</div>
+  <div id="join" class="overlay">
+    <div style="font-size:22px;color:#7ec8ff">game1 — 等角視界 (map_generator 渲染)</div>
+    <input id="joinName" maxlength="12" placeholder="輸入名字" value="" />
+    <button id="joinBtn">進入世界</button>
+    <div class="err" id="joinErr"></div>
+  </div>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+# README.todo
+
+## Archive (2026-08-03 完成)
+
+- [x] 營地機能擴充：安全區進入即存檔提示 + 地下層/裏側補給櫃檯
+- [x] 進度持久化進階：同名同時上線自動改名 (`Ash` → `Ash-2`)，存檔不互蓋
+- [x] 第三章平衡：裏側中繼安全平台 (rows 101-103) + 補給點
+- [x] 通關後遊玩內容：Boss 重打金幣加倍 + 稀有裝備掉落
+- [x] 接上 gosdk config.Default (~/.config/game1/)，flag > APP_* env > yaml > 預設
+- [x] ecosystem.config.js 常駐化 (pm2) + run.sh + ~/.config/game1/logs
+- [x] client 端預測 (prediction/reconciliation)：按鍵 ~35ms 內即反應
+- [x] 怪物掉落物與稀有裝備 (非商店取得, 更優才自動裝上)
+- [x] PvP 開關 (野區決鬥, 雙方同意制, 安全區免疫, 傷害減半)
+- [x] 第二張地圖與地圖切換 → 已由三層地圖 + 傳送門達成 (北路直通神殿)
+- [x] 行動裝置觸控搖桿 (虛擬搖桿 + 攻擊/互動/藥水鍵)
+- [x] 快照 delta 壓縮 (實測省 52% 頻寬, 每 2s 一次 keyframe)
+- [x] 音量/靜音設定 UI (滑桿 + M 鍵, 存 localStorage)
+
+## Pending
+
+- [ ] PvP 進階：決鬥排行榜、擊敗獎勵、組隊 (目前僅單純互毆)
+- [ ] 觸控 UI 實機測試 (目前只在 headless 模擬 pointer 事件驗證)
+- [ ] binary protocol (人數 >30 時；delta 已先解決大部分頻寬)
+- [ ] 稀有裝備背包與手動切換 (目前只在更優時自動裝上)
+- [ ] 劇情第四章 / 通關後新副本

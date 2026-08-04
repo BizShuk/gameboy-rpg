@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PokeTown Online</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="480" height="360"></canvas>
+
+  <div id="join">
+    <div class="panel">
+      <h1>POKETOWN ONLINE</h1>
+      <p class="sub">多人連線動作 RPG demo — 城鎮是安全區，野外有怪物</p>
+      <input id="name" maxlength="12" placeholder="你的名字" autocomplete="off">
+      <button id="joinBtn">進入城鎮</button>
+      <p id="joinErr" class="err"></p>
+      <p class="hint">移動 WASD/方向鍵 · 攻擊 J/Space · 商店 E · 道具 1-4</p>
+      <p class="hint"><a href="/iso/" style="color:#7ec8ff">✦ 等角視界版 (map_generator 渲染) →</a></p>
+    </div>
+  </div>
+
+  <div id="shop" class="hidden">
+    <div class="shopHead">
+      <span id="shopTitle">SHOP</span>
+      <span id="shopGold">0 G</span>
+      <button id="shopClose">×</button>
+    </div>
+    <ul id="shopList"></ul>
+    <p class="hint">點擊購買 · E/Esc 關閉 · 武器防具直接替換</p>
+  </div>
+
+  <div id="dlg" class="hidden">
+    <div id="dlgName"></div>
+    <div id="dlgTxt"></div>
+    <div id="dlgActs"></div>
+  </div>
+
+  <div id="touch" class="hidden">
+    <div id="stick"><div id="stickKnob"></div></div>
+    <div id="touchBtns">
+      <button id="btnAtk" class="tbtn">攻擊</button>
+      <button id="btnAct" class="tbtn small">E</button>
+      <button id="btnPot" class="tbtn small">藥</button>
+    </div>
+  </div>
+
+  <div id="settings">
+    <button id="volBtn" title="靜音切換 (M)">🔊</button>
+    <input id="volRange" type="range" min="0" max="100" value="100" title="音量">
+  </div>
+
+  <div id="toast" class="hidden"></div>
+</div>
+<script src="client.js"></script>
+</body>
+</html>

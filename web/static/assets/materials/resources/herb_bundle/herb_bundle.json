@@ -1,0 +1,46 @@
+{
+  "objects": {
+    "herb_bundle:left": {
+      "x": 0,
+      "y": 0,
+      "w": 128,
+      "h": 128
+    },
+    "herb_bundle:right": {
+      "x": 128,
+      "y": 0,
+      "w": 128,
+      "h": 128
+    },
+    "herb_bundle:up": {
+      "x": 256,
+      "y": 0,
+      "w": 128,
+      "h": 128
+    },
+    "herb_bundle:down": {
+      "x": 384,
+      "y": 0,
+      "w": 128,
+      "h": 128
+    },
+    "herb_bundle:attack": {
+      "x": 512,
+      "y": 0,
+      "w": 128,
+      "h": 128
+    },
+    "herb_bundle:defense": {
+      "x": 640,
+      "y": 0,
+      "w": 128,
+      "h": 128
+    },
+    "herb_bundle:sit": {
+      "x": 768,
+      "y": 0,
+      "w": 128,
+      "h": 128
+    }
+  }
+}
