@@ -1,12 +1,13 @@
 {
-  "name": "game1",
+  "name": "gameboy-rpg",
   "version": "0.0.0",
   "private": true,
   "description": "Pokemon Red/Blue 復古風格的多人連線動作 RPG demo",
   "scripts": {
-    "dev": "go run ./cmd/game1",
+    "dev": "go run ./cmd/gameboy-rpg",
     "test": "go test ./...",
-    "build": "go build -o bin/game1 ./cmd/game1",
-    "clean": "rm -rf bin"
+    "build": "go build -o bin/gameboy-rpg ./cmd/gameboy-rpg",
+    "clean": "rm -rf bin",
+    "run:setup": "./scripts/run.sh"
   }
 }

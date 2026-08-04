@@ -8,7 +8,7 @@ package server
 import (
 	"maps"
 
-	"github.com/bizshuk/game1/game"
+	"github.com/bizshuk/gameboy-rpg/game"
 )
 
 // playerEq 玩家狀態是否相同。

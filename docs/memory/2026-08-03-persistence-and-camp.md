@@ -6,7 +6,7 @@
   檔案實作獨立成 `store/` package (JSON 全量寫 + tmp→rename 原子落盤 +
   毀損自動重來)。斷線即存, 另每 30s 自動存 (server 被 kill 也保住)。
   以`玩家名稱`為 key，存 quest/裝備/金幣/背包, `不存座標` (重連回城)。
-  預設 `~/.config/game1/data/players.json`，`-save ""` 停用。
+  預設 `~/.config/gameboy-rpg/data/players.json`，`-save ""` 停用。
 - `地下層平衡`：`TileMap.Safe` 重構為 `Safes []Rect` (多安全區)，
   新增地下層`入口營地` (雙營火 tile `^`, 怪禁入 + 回血)；入口不再生石像鬼。
   幽影 8→7 傷、石像鬼 14→12、兩者索敵 7u→5.5u (黑暗中近了才發現)；

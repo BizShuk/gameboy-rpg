@@ -1,4 +1,4 @@
-module github.com/bizshuk/game1
+module github.com/bizshuk/gameboy-rpg
 
 go 1.26.3
 

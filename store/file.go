@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"sync"
 
-	"github.com/bizshuk/game1/game"
+	"github.com/bizshuk/gameboy-rpg/game"
 )
 
 // File 以單一 JSON 檔保存全部玩家進度。

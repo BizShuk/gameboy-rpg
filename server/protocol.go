@@ -2,7 +2,7 @@ package server
 
 // protocol.go — WebSocket 線上訊息格式 (wire protocol, JSON)
 
-import "github.com/bizshuk/game1/game"
+import "github.com/bizshuk/gameboy-rpg/game"
 
 // ClientMsg 客戶端上行訊息
 //

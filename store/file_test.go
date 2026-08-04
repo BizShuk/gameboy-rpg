@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/bizshuk/game1/game"
+	"github.com/bizshuk/gameboy-rpg/game"
 )
 
 func TestFileRoundTrip(t *testing.T) {

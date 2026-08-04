@@ -1,6 +1,6 @@
 # 《綠泉鎮與月光水晶》 (Greenspring & the Moonlight Crystal)
 
-game1 主線劇情文本與設計對照。劇情資料的 source of truth 在
+gameboy-rpg 主線劇情文本與設計對照。劇情資料的 source of truth 在
 `game/story.go` (Stages/NPCs/對話)；本文件是敘事層說明。
 
 ## 世界觀 (Setting)

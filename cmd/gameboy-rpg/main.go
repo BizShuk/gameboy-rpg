@@ -1,4 +1,4 @@
-// game1 — Pokemon 風格多人連線動作 RPG demo server
+// gameboy-rpg — Pokemon 風格多人連線動作 RPG demo server
 package main
 
 import (
@@ -8,18 +8,18 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/bizshuk/game1/game"
-	"github.com/bizshuk/game1/server"
-	"github.com/bizshuk/game1/store"
-	"github.com/bizshuk/game1/web"
+	"github.com/bizshuk/gameboy-rpg/game"
+	"github.com/bizshuk/gameboy-rpg/server"
+	"github.com/bizshuk/gameboy-rpg/store"
+	"github.com/bizshuk/gameboy-rpg/web"
 	"github.com/bizshuk/gosdk/config"
 	"github.com/spf13/viper"
 )
 
-const appName = "game1"
+const appName = "gameboy-rpg"
 
 func main() {
-	// 設定優先序: flag > 環境變數 (APP_ADDR/APP_SAVE) > ~/.config/game1/*.yaml > 預設
+	// 設定優先序: flag > 環境變數 (APP_ADDR/APP_SAVE) > ~/.config/gameboy-rpg/*.yaml > 預設
 	config.Default(config.WithAppName(appName))
 	viper.SetDefault("addr", ":8470")
 	viper.SetDefault("save", filepath.Join(config.GetAppConfigDir(), "data", "players.json"))
@@ -46,7 +46,7 @@ func main() {
 	hub := server.NewHub(w)
 	go hub.Run()
 
-	slog.Info("game1 server listening",
+	slog.Info("gameboy-rpg server listening",
 		"addr", listen, "url", "http://localhost"+listen, "config_dir", config.GetAppConfigDir())
 	if err := http.ListenAndServe(listen, server.Routes(hub, web.FS())); err != nil {
 		slog.Error("server exited", "err", err, "addr", listen, "component", "http")

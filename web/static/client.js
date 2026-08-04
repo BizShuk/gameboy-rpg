@@ -37,20 +37,20 @@ function initAudio() {
 }
 // 音量設定 (0-1, 0 = 靜音); 存 localStorage
 let volume = (() => {
-  const v = parseFloat(localStorage.getItem("game1.vol"));
+  const v = parseFloat(localStorage.getItem("gameboy-rpg.vol"));
   return Number.isFinite(v) ? Math.min(1, Math.max(0, v)) : 1;
 })();
 function setVolume(v) {
   volume = Math.min(1, Math.max(0, v));
-  localStorage.setItem("game1.vol", String(volume));
+  localStorage.setItem("gameboy-rpg.vol", String(volume));
   const el = document.getElementById("volRange");
   if (el) el.value = String(Math.round(volume * 100));
   const btn = document.getElementById("volBtn");
   if (btn) btn.textContent = volume === 0 ? "🔇" : volume < 0.5 ? "🔉" : "🔊";
 }
 function toggleMute() {
-  setVolume(volume === 0 ? (Number(localStorage.getItem("game1.lastVol")) || 1) : 0);
-  if (volume !== 0) localStorage.setItem("game1.lastVol", String(volume));
+  setVolume(volume === 0 ? (Number(localStorage.getItem("gameboy-rpg.lastVol")) || 1) : 0);
+  if (volume !== 0) localStorage.setItem("gameboy-rpg.lastVol", String(volume));
   toast(volume === 0 ? "靜音 (M 切換)" : `音量 ${Math.round(volume * 100)}%`);
 }
 

@@ -10,7 +10,7 @@ import (
 	"testing/fstest"
 	"time"
 
-	"github.com/bizshuk/game1/game"
+	"github.com/bizshuk/gameboy-rpg/game"
 	"github.com/gorilla/websocket"
 )
 

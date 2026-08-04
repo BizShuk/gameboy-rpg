@@ -1,15 +1,15 @@
-# game1 — 技術脈絡 (Technical Context)
+# gameboy-rpg — 技術脈絡 (Technical Context)
 
 Pokemon 風格多人連線動作 RPG demo。業務定義與玩法見 `README.md`。
 
 ## 結構 (Structure)
 
 ```tree
-game1/
-├── cmd/game1/main.go        # 進入點：gosdk config → 組裝 store→World→Hub→HTTP
+gameboy-rpg/
+├── cmd/gameboy-rpg/main.go  # 進入點：gosdk config → 組裝 store→World→Hub→HTTP
 ├── run.sh                   # 建 metadata 目錄 + build + 執行 (pm2 script)
 ├── ecosystem.config.js      # pm2 常駐設定 (Go 版 pm2, 路徑字面值)
-├── config/example/          # 設定範例 (複製到 ~/.config/game1/)
+├── config/example/          # 設定範例 (複製到 ~/.config/gameboy-rpg/)
 ├── game/                    # 遊戲領域 (無網路依賴, 可獨立測試)
 │   ├── map.go               # 地圖邏輯: 碰撞、safe zone、TilesOf (資料見 map_gen.go)
 │   ├── map_gen.go           # 生成地圖資料 (map_generator 產物; mapRows/Portals/生怪區/NPC 落點)
@@ -62,7 +62,7 @@ game1/
   MapDocument 做等角渲染,實體為 procedural billboard。此 client 例外於
   「決策 4 零資產檔」:皮膚資產 (tileset/materials/portal.gif) 隨 embed 打包於
   `web/static/assets/`。再生:map_generator 內 `node apps/game1-client/build.mjs`
-  → 重建 game1。
+  → 重建 gameboy-rpg。
 - `決策 15 — 地圖資料由 map_generator 生成 (2026-08-04)`：`game/map_gen.go` 是
   `../map_generator` 的 `/api/generate/game1?format=gofile` 產物 (seed `g1-std`,
   56x120)，含 `mapRows`、`dungeonTopRow`/`voidTopRow`、`Portals` (深淵門
@@ -76,14 +76,14 @@ game1/
 - `決策 4 — client 零資產檔`：所有 sprite 為 client.js 內 string-art，tile
   由程式繪製進 offscreen atlas；無圖檔、無外部字型/CDN，單 binary 全內嵌。
 - `決策 5 — 設定走 gosdk config.Default`：`cmd` 啟動時
-  `config.Default(config.WithAppName("game1"))`，優先序
-  `flag > APP_* 環境變數 > ~/.config/game1/*.yaml > viper 內建預設`；
+  `config.Default(config.WithAppName("gameboy-rpg"))`，優先序
+  `flag > APP_* 環境變數 > ~/.config/gameboy-rpg/*.yaml > viper 內建預設`；
   舊的 `PORT` env 仍相容。存檔預設落在 `config.GetAppConfigDir()/data/`。
 - `決策 10 — 進度持久化以名稱為 key，World 不碰檔案`：`game.Store` 是介面
   (`Load`/`Save`)，`game/` 只認 `Progress` 值物件；檔案實作在 `store/`，
   由 `cmd` 注入。存 quest/裝備/金幣/背包，`不存座標` (重連一律回城)。
   斷線時存 + 每 30s 自動存 (被 kill 也保住)。預設路徑
-  `~/.config/game1/data/players.json`，`-save ""` 可關閉。
+  `~/.config/gameboy-rpg/data/players.json`，`-save ""` 可關閉。
 - `決策 12 — 多層地圖以 row 分段, 傳送門串接`：同一張 ASCII 地圖縱向分三段
   (地上 0-63 / 地下層 64-87 / 月之裏側 88-119)，界線常數在 `map.go`
   (`dungeonTopRow`/`voidTopRow`)。層間移動一律走 `Portals` 表 (踩到即傳送,

@@ -7,7 +7,7 @@ import (
 	"log/slog"
 	"time"
 
-	"github.com/bizshuk/game1/game"
+	"github.com/bizshuk/gameboy-rpg/game"
 )
 
 // autosaveEvery 自動存檔間隔 (ticks; 20Hz → 30s)

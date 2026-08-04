@@ -1,4 +1,4 @@
-# game1 — PokeTown Online
+# gameboy-rpg — PokeTown Online
 
 Pokemon Red/Blue 復古風格的`多人連線動作 RPG demo`，含`三章完整主線劇情`
 《綠泉鎮與月光水晶》(見 `docs/story.md`)。城內是安全區 (safe zone)，
@@ -13,13 +13,13 @@ open http://localhost:8470    # 多開分頁或區網其他裝置連入即為多
 ```
 
 設定優先序：`-addr`/`-save` flag > `APP_ADDR`/`APP_SAVE` 環境變數 >
-`~/.config/game1/game1.yaml` (範例見 `config/example/`) > 內建預設。
-常駐執行：`pm2 apply && pm2 start game1`。
+`~/.config/gameboy-rpg/gameboy-rpg.yaml` (範例見 `config/example/`) > 內建預設。
+常駐執行：`pm2 apply && pm2 start gameboy-rpg`。
 
 分享連結可帶名字直接入場：`http://<host>:8470/?name=Ash`。
 
 `進度會自動保存`：用同一個名字重新連線即續玩 (劇情階段、裝備、金幣、背包)。
-存檔位於 `~/.config/game1/data/players.json`，`-save ""` 可停用持久化。
+存檔位於 `~/.config/gameboy-rpg/data/players.json`，`-save ""` 可停用持久化。
 
 ## 操作 (Controls)
 
