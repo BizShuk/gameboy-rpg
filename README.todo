@@ -6,8 +6,8 @@
 - [x] 進度持久化進階：同名同時上線自動改名 (`Ash` → `Ash-2`)，存檔不互蓋
 - [x] 第三章平衡：裏側中繼安全平台 (rows 101-103) + 補給點
 - [x] 通關後遊玩內容：Boss 重打金幣加倍 + 稀有裝備掉落
-- [x] 接上 gosdk config.Default (~/.config/game1/)，flag > APP_* env > yaml > 預設
-- [x] ecosystem.config.js 常駐化 (pm2) + run.sh + ~/.config/game1/logs
+- [x] 接上 gosdk config.Default (~/.config/gameboy-rpg/)，flag > APP_* env > yaml > 預設
+- [x] ecosystem.config.js 常駐化 (pm2) + run.sh + ~/.config/gameboy-rpg/logs
 - [x] client 端預測 (prediction/reconciliation)：按鍵 ~35ms 內即反應
 - [x] 怪物掉落物與稀有裝備 (非商店取得, 更優才自動裝上)
 - [x] PvP 開關 (野區決鬥, 雙方同意制, 安全區免疫, 傷害減半)

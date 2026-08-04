@@ -1,0 +1,27 @@
+# Go build artifacts
+/bin/
+*.exe
+*.test
+*.out
+*.prof
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Local config (gosdk config.Default writes to ~/.config/gameboy-rpg/)
+.env
+.env.local
+*.local.yaml
+
+# Runtime data (saves go to ~/.config/gameboy-rpg/data/, not in repo)
+data/
+
+# Node / Vite (if any client tooling sneaks in)
+node_modules/
+dist/
+.vite/
