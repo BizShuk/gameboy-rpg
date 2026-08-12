@@ -1,0 +1,11 @@
+Create one custom wide-cell 4 by 4 equipment sheet containing 16 separate original handheld weapons for a top-down monster-taming action RPG. Use the visible overworld tileset as the exact four-value monochrome Game Boy pixel-art, outline, scale, and material-language reference. Evoke the late-1990s Pokémon Red, Blue, and Green era without copying any existing item.
+
+Use the visible wide 4x4 guide only for equal invisible wide cells, centering, and safe padding. Do not reproduce boxes, marks, labels, or separators. Each weapon is shown alone, horizontal from handle at left to tip at right, with a consistent grip origin and gameplay-readable silhouette.
+
+Exact cells, left to right:
+Row 1: simple wooden sword; short copper dagger; straight iron sword; long iron spear.
+Row 2: broad battle axe; ornate hero sword; flame-shaped blade; pale fang-edged sword.
+Row 3: crescent moon blade; star-pointed blade; dark void edge; compact hunter bow.
+Row 4: starlight lance; heavy round mace; crescent wand; plain training staff.
+
+Exactly 16 designs. Keep every object fully inside the central 75% of its wide cell with generous magenta space and no contact shadow. Perfectly flat solid #FF00FF background, no texture, floor, or variation; do not use magenta in the weapons. Crisp hard pixel clusters, no antialiasing, gradients, color, text, UI, hands, characters, labels, logos, or watermark.

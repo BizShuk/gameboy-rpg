@@ -1,0 +1,11 @@
+Use case: stylized-concept
+Asset type: production 2D game ambient terrain FX sprite sheet
+Primary request: Create one original four-frame looping flame overlay sprite sheet for torches and campfires in a top-down late-1990s four-shade handheld monster-catching RPG.
+Input images: The provided town screenshot is a style and scale reference only; do not reproduce its scene, UI, characters, or map layout.
+Scene/backdrop: perfectly flat solid #FF00FF chroma-key background.
+Subject: exactly four compact flame sprites, one per cell, showing a seamless loop: small ignition, rising flame, peak flicker, settling flame. Only flame and two or three tightly attached sparks; no torch object, logs, brazier, ground tile, smoke cloud, shadow, or baked floor.
+Style/medium: crisp low-resolution pixel art, original Game Boy-era visual language, hard pixel clusters, no antialiasing, no gradients, no dithering noise.
+Composition/framing: exact 2x2 grid of four equal invisible cells; same centered upright footprint, fixed horizontal ignition baseline at 72% of every cell height, fixed scale and width; tips deform above the baseline; subject fills about 50% of each cell; generous magenta margin; no visible grid lines or borders.
+Color palette: monochrome black, dark gray, light gray, and white subject pixels only; background exclusively #FF00FF.
+Constraints: every flame and spark fits fully inside its cell; nothing crosses cell edges; seamless order left-to-right then next row; no text, labels, UI, watermark, logo, lighting, texture, or background variation.
+Avoid: characters, scenery, realistic fire, 3D, painterly effects, translucency, blur, glow halos, baked ground, lava pool, tile plate, perspective floor art.

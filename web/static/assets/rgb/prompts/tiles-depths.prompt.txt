@@ -1,0 +1,11 @@
+Create an original 4 by 4 tileset atlas for shrine, cave, and cosmic-void regions in a top-down monster-taming RPG. Match the exact four-shade monochrome Game Boy pixel-art language of the visible overworld tileset reference, inspired by the late-1990s Pokémon Red, Blue, and Green era without copying any existing dungeon or tile.
+
+Use the visible overworld atlas as the art, palette-value, camera, outline, pixel-cluster, and scale reference. Use the visible layout guide only for 4 rows, 4 columns, equal invisible square slots, and safe padding. Never reproduce guide boxes, labels, borders, separators, or marks.
+
+Exact cells, left to right:
+Row 1: ancient shrine floor; carved shrine wall; rough cave floor; jagged cave wall.
+Row 2: animated-looking lava surface; wall torch; meteor ore deposit; sealed abyss gate.
+Row 3: empty cosmic void; star-stone floor; narrow starlight bridge; swirling portal.
+Row 4: star crystal cluster; ominous core altar; cracked void-floor alternate; shrine threshold alternate.
+
+Strictly four values, crisp hard pixels, compact 16x16-tile logic, no antialiasing, no gradients, no color, no modern lighting, no isometric perspective. Exactly 16 designs. Terrain cells are seamless full-bleed surfaces and object cells are fully contained. Everything must remain readable after reduction to 16 by 16 pixels. No characters, creatures, text, letters, numbers, UI, labels, logos, or watermark.

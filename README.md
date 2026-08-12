@@ -5,6 +5,10 @@ Pokemon Red/Blue 復古風格的`多人連線動作 RPG demo`，含`三章完整
 野外與地底/虛空各層有怪物即時追擊；接任務、採素材、鍛造神兵、
 討伐五隻 Boss 直到傳說完結。
 
+所有 terrain、建築、場景物件、角色、NPC、怪物、武器、裝備、道具與動態 FX 皆採用
+原創四階 Game Boy green palette pixel art，維持 Pokemon Red/Blue/Green 世代的
+清楚輪廓、tile readability 與戰鬥辨識度。
+
 ## 快速開始 (Quick Start)
 
 ```bash

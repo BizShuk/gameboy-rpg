@@ -1,0 +1,13 @@
+Create an original 4 by 4 tileset atlas for a top-down monster-taming RPG, matching the visual grammar of the late-1990s Pokémon Red, Blue, and Green Game Boy era without copying any existing copyrighted tile or location.
+
+Use the layout guide image just shown as a layout-only reference. Use it only for the 4 rows, 4 columns, equal invisible square slots, centering, spacing, and safe padding. Do not reproduce the guide: no visible boxes, safe-area rectangles, center marks, labels, borders, separators, or guide background.
+
+Art direction: authentic first-generation monochrome handheld RPG pixel art, strictly four values, dark ink outlines, compact 16x16-tile visual logic, crisp hard pixel clusters, no antialiasing, no gradients, no color, no modern lighting, no texture noise, and no isometric perspective. Every cell must read clearly when reduced to 16 by 16 pixels. Original designs only.
+
+Exact cells, left to right:
+Row 1: short grass ground; tiny flower grass; tall encounter grass; packed dirt route.
+Row 2: town paving stones; furrowed farm soil; wooden bridge deck; dark forest ground.
+Row 3: dense forest encounter grass; rippling water; water with one lily pad; compact leafy tree obstacle.
+Row 4: short wooden fence; village wall tile; round hedge bush; small field boulder.
+
+The atlas must contain exactly 16 tile designs. Each tile fills its own square cleanly and is tilemap-ready. Terrain cells are seamless full-bleed surfaces. Obstacle cells use the same top-down RPG camera and remain fully contained. No characters, creatures, UI, text, letters, numbers, shadows outside cells, logos, or watermark.

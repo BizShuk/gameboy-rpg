@@ -1,0 +1,11 @@
+Use case: stylized-concept
+Asset type: production 2D game celebration impact FX sprite sheet
+Primary request: Create one original four-frame one-shot firework sparkle sprite sheet for a top-down late-1990s four-shade handheld monster-catching RPG ending celebration.
+Input images: The provided town screenshot is a style and scale reference only; do not reproduce its scene, UI, characters, or map layout.
+Scene/backdrop: perfectly flat solid #FF00FF chroma-key background.
+Subject: exactly four compact radial firework sparkle sprites, one per cell, in order: bright seed, short symmetric rays, peak starburst, fading small spark motes. Abstract sparkle pixels only; no rocket, smoke trail, sky, scenery, character, object, ground tile, or text.
+Style/medium: crisp low-resolution pixel art, original Game Boy-era visual language, hard readable pixel clusters, no antialiasing, no gradients, no noisy dithering.
+Composition/framing: exact 2x2 grid of four equal invisible cells; fixed center and scale; burst stays within one circular safe envelope; peak fills about 60% of each cell; generous magenta margin; no visible grid lines, borders, labels, or frames.
+Color palette: monochrome black, dark gray, light gray, and white subject pixels only; background exclusively #FF00FF.
+Constraints: every ray and mote fits fully inside its cell; detached motes remain tightly grouped; nothing crosses cell edges; order left-to-right then next row; no text, UI, watermark, logo, lighting, texture, or background variation.
+Avoid: characters, scenery, realistic fireworks, 3D, painterly effects, translucency, blur, glow halos, baked background.

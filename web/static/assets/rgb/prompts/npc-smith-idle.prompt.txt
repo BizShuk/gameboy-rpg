@@ -1,0 +1,5 @@
+Edit the visible blacksmith 2x2 idle sheet while preserving the exact same original blacksmith identity, face, bandana, beard, apron, hammer, pixel-art style, four-value monochrome rendering, solid #FF00FF background, and four animation poses.
+
+Correct only the generation geometry: put the blacksmith at exactly the same camera distance and anatomical scale in all four cells. Align the lowest boot-contact pixels to the same horizontal position at 82% of each cell height. Align the pelvis and torso center to the same x coordinate in every cell. Keep every complete body inside the central 65% safe area with generous magenta padding. The bottom two frames must not sit higher than the top two frames. Keep the hammer close to the body. No part may cross a cell edge.
+
+Use the visible 2x2 guide only for layout. Do not reproduce any boxes, guides, marks, labels, borders, or separators. Exactly 2 rows by 2 columns. No floor, shadows, antialiasing, gradients, color, text, UI, logo, or watermark.

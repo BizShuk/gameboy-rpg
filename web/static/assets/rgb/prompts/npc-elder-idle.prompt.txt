@@ -1,0 +1,5 @@
+Create a 2x2 idle animation sheet for one original village elder NPC in a top-down monster-taming RPG. Use the visible overworld tileset as the exact scale, four-value monochrome Game Boy pixel language, outline weight, and top-down 3/4 camera reference. Evoke the late-1990s Pokémon Red, Blue, and Green era without copying any existing NPC.
+
+The same elder appears in all four cells: swept-back white hair, strong eyebrows, short walking staff held close to the body, long village coat, and calm trustworthy stance. Frames: neutral, tiny breathing lift, brief blink and staff settle, return toward neutral. Full body and original silhouette.
+
+Use the visible 2x2 guide only for invisible cell geometry. Keep the body centered inside the central 65% safe area, identical scale, fixed feet line, and no part crossing a cell edge. Perfectly flat solid #FF00FF background, no floor or shadow, no magenta in the NPC. Crisp hard pixel clusters, no antialiasing, gradients, color, text, UI, labels, logo, or watermark.

@@ -1,0 +1,7 @@
+Create one original top-down overworld player walk sheet for a monster-taming action RPG. Use the visible overworld tileset as the exact scale, value, outline, and pixel-cluster reference. Evoke the late-1990s Pokémon Red, Blue, and Green Game Boy era without copying any existing protagonist, costume, or sprite.
+
+Exact 4x4 grid: row 1 faces down, row 2 faces left, row 3 faces right, row 4 faces up. In each row show four coherent walk phases: contact, passing, opposite contact, passing. The same young field explorer appears in all 16 cells: short brimmed cap with a small square badge, cropped travel jacket, compact backpack, trousers, and boots. Original face and silhouette. Full body, top-down 3/4 overworld view.
+
+Use the visible 4x4 guide only for invisible slot geometry. Do not reproduce boxes, marks, labels, or separators. Keep the body centered in every cell, inside the central 65% safe area, with a stable feet line and identical camera distance and body scale. No limb, hat, backpack, or shadow may cross a cell edge.
+
+Authentic first-generation four-value monochrome handheld pixel art, crisp hard clusters, no antialiasing, no gradients, no modern lighting. Perfectly flat solid #FF00FF background with no texture, shadow, floor, or variation. Do not use magenta in the character. No text, UI, creature, weapon, logo, or watermark.

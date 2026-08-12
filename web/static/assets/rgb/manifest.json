@@ -1,0 +1,960 @@
+{
+  "actors": {
+    "elder": {
+      "columns": 2,
+      "file": "actors/elder.png",
+      "frameHeight": 32,
+      "frameWidth": 32,
+      "frames": 4,
+      "prompt": "prompts/npc-elder-idle.prompt.txt"
+    },
+    "player": {
+      "columns": 4,
+      "directionGIFs": {
+        "d": "actors/player-down.gif",
+        "l": "actors/player-left.gif",
+        "r": "actors/player-right.gif",
+        "u": "actors/player-up.gif"
+      },
+      "directionStrips": {
+        "d": "actors/player-down-strip.png",
+        "l": "actors/player-left-strip.png",
+        "r": "actors/player-right-strip.png",
+        "u": "actors/player-up-strip.png"
+      },
+      "directions": {
+        "d": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "l": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "r": [
+          8,
+          9,
+          10,
+          11
+        ],
+        "u": [
+          12,
+          13,
+          14,
+          15
+        ]
+      },
+      "file": "actors/player.png",
+      "frameHeight": 32,
+      "frameWidth": 32,
+      "frames": 16,
+      "prompt": "prompts/player-walk.prompt.txt"
+    },
+    "smith": {
+      "columns": 2,
+      "file": "actors/smith.png",
+      "frameHeight": 32,
+      "frameWidth": 32,
+      "frames": 4,
+      "prompt": "prompts/npc-smith-idle.prompt.txt"
+    }
+  },
+  "effects": {
+    "arcane-pulse": {
+      "columns": 2,
+      "file": "effects/arcane-pulse.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 4,
+      "loop": true,
+      "prompt": "prompts/fx-arcane-pulse.prompt.txt"
+    },
+    "firework": {
+      "columns": 2,
+      "file": "effects/firework.png",
+      "frameHeight": 32,
+      "frameWidth": 32,
+      "frames": 4,
+      "loop": false,
+      "prompt": "prompts/fx-firework.prompt.txt"
+    },
+    "flame": {
+      "columns": 2,
+      "file": "effects/flame.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 4,
+      "loop": true,
+      "prompt": "prompts/fx-flame.prompt.txt"
+    },
+    "lava-bubble": {
+      "columns": 2,
+      "file": "effects/lava-bubble.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 4,
+      "loop": true,
+      "prompt": "prompts/fx-lava-bubble.prompt.txt"
+    },
+    "poof": {
+      "columns": 2,
+      "file": "effects/poof.png",
+      "frameHeight": 32,
+      "frameWidth": 32,
+      "frames": 4,
+      "loop": false,
+      "prompt": "prompts/fx-poof.prompt.txt"
+    },
+    "water-ripple": {
+      "columns": 2,
+      "file": "effects/water-ripple.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 4,
+      "loop": true,
+      "prompt": "prompts/fx-water-ripple.prompt.txt"
+    }
+  },
+  "items": {
+    "aegis_dawn": {
+      "columns": 1,
+      "file": "items/aegis_dawn.png",
+      "frameHeight": 24,
+      "frameWidth": 24,
+      "frames": 1,
+      "prompt": "prompts/armor-pack.prompt.txt"
+    },
+    "battle_axe": {
+      "columns": 1,
+      "file": "weapons/battle_axe.png",
+      "frameHeight": 48,
+      "frameWidth": 48,
+      "frames": 1,
+      "prompt": "prompts/weapons-pack.prompt.txt"
+    },
+    "beetle_shell": {
+      "columns": 1,
+      "file": "items/beetle_shell.png",
+      "frameHeight": 24,
+      "frameWidth": 24,
+      "frames": 1,
+      "prompt": "prompts/supplies-pack.prompt.txt"
+    },
+    "chain_mail": {
+      "columns": 1,
+      "file": "items/chain_mail.png",
+      "frameHeight": 24,
+      "frameWidth": 24,
+      "frames": 1,
+      "prompt": "prompts/armor-pack.prompt.txt"
+    },
+    "cloth_armor": {
+      "columns": 1,
+      "file": "items/cloth_armor.png",
+      "frameHeight": 24,
+      "frameWidth": 24,
+      "frames": 1,
+      "prompt": "prompts/armor-pack.prompt.txt"
+    },
+    "copper_dagger": {
+      "columns": 1,
+      "file": "weapons/copper_dagger.png",
+      "frameHeight": 48,
+      "frameWidth": 48,
+      "frames": 1,
+      "prompt": "prompts/weapons-pack.prompt.txt"
+    },
+    "dragon_scale": {
+      "columns": 1,
+      "file": "items/dragon_scale.png",
+      "frameHeight": 24,
+      "frameWidth": 24,
+      "frames": 1,
+      "prompt": "prompts/armor-pack.prompt.txt"
+    },
+    "eclipse_crown": {
+      "columns": 1,
+      "file": "items/eclipse_crown.png",
+      "frameHeight": 24,
+      "frameWidth": 24,
+      "frames": 1,
+      "prompt": "prompts/armor-pack.prompt.txt"
+    },
+    "fang_blade": {
+      "columns": 1,
+      "file": "weapons/fang_blade.png",
+      "frameHeight": 48,
+      "frameWidth": 48,
+      "frames": 1,
+      "prompt": "prompts/weapons-pack.prompt.txt"
+    },
+    "flame_blade": {
+      "columns": 1,
+      "file": "weapons/flame_blade.png",
+      "frameHeight": 48,
+      "frameWidth": 48,
+      "frames": 1,
+      "prompt": "prompts/weapons-pack.prompt.txt"
+    },
+    "haste_potion": {
+      "columns": 1,
+      "file": "items/haste_potion.png",
+      "frameHeight": 24,
+      "frameWidth": 24,
+      "frames": 1,
+      "prompt": "prompts/supplies-pack.prompt.txt"
+    },
+    "hero_sword": {
+      "columns": 1,
+      "file": "weapons/hero_sword.png",
+      "frameHeight": 48,
+      "frameWidth": 48,
+      "frames": 1,
+      "prompt": "prompts/weapons-pack.prompt.txt"
+    },
+    "hi_potion": {
+      "columns": 1,
+      "file": "items/hi_potion.png",
+      "frameHeight": 24,
+      "frameWidth": 24,
+      "frames": 1,
+      "prompt": "prompts/supplies-pack.prompt.txt"
+    },
+    "hunters_bow": {
+      "columns": 1,
+      "file": "weapons/hunters_bow.png",
+      "frameHeight": 48,
+      "frameWidth": 48,
+      "frames": 1,
+      "prompt": "prompts/weapons-pack.prompt.txt"
+    },
+    "iron_armor": {
+      "columns": 1,
+      "file": "items/iron_armor.png",
+      "frameHeight": 24,
+      "frameWidth": 24,
+      "frames": 1,
+      "prompt": "prompts/armor-pack.prompt.txt"
+    },
+    "iron_sword": {
+      "columns": 1,
+      "file": "weapons/iron_sword.png",
+      "frameHeight": 48,
+      "frameWidth": 48,
+      "frames": 1,
+      "prompt": "prompts/weapons-pack.prompt.txt"
+    },
+    "leather_armor": {
+      "columns": 1,
+      "file": "items/leather_armor.png",
+      "frameHeight": 24,
+      "frameWidth": 24,
+      "frames": 1,
+      "prompt": "prompts/armor-pack.prompt.txt"
+    },
+    "long_spear": {
+      "columns": 1,
+      "file": "weapons/long_spear.png",
+      "frameHeight": 48,
+      "frameWidth": 48,
+      "frames": 1,
+      "prompt": "prompts/weapons-pack.prompt.txt"
+    },
+    "meteor_shard": {
+      "columns": 1,
+      "file": "items/meteor_shard.png",
+      "frameHeight": 24,
+      "frameWidth": 24,
+      "frames": 1,
+      "prompt": "prompts/supplies-pack.prompt.txt"
+    },
+    "moon_blade": {
+      "columns": 1,
+      "file": "weapons/moon_blade.png",
+      "frameHeight": 48,
+      "frameWidth": 48,
+      "frames": 1,
+      "prompt": "prompts/weapons-pack.prompt.txt"
+    },
+    "moon_ward": {
+      "columns": 1,
+      "file": "items/moon_ward.png",
+      "frameHeight": 24,
+      "frameWidth": 24,
+      "frames": 1,
+      "prompt": "prompts/armor-pack.prompt.txt"
+    },
+    "potion": {
+      "columns": 1,
+      "file": "items/potion.png",
+      "frameHeight": 24,
+      "frameWidth": 24,
+      "frames": 1,
+      "prompt": "prompts/supplies-pack.prompt.txt"
+    },
+    "power_potion": {
+      "columns": 1,
+      "file": "items/power_potion.png",
+      "frameHeight": 24,
+      "frameWidth": 24,
+      "frames": 1,
+      "prompt": "prompts/supplies-pack.prompt.txt"
+    },
+    "shell_armor": {
+      "columns": 1,
+      "file": "items/shell_armor.png",
+      "frameHeight": 24,
+      "frameWidth": 24,
+      "frames": 1,
+      "prompt": "prompts/armor-pack.prompt.txt"
+    },
+    "slime_gel": {
+      "columns": 1,
+      "file": "items/slime_gel.png",
+      "frameHeight": 24,
+      "frameWidth": 24,
+      "frames": 1,
+      "prompt": "prompts/supplies-pack.prompt.txt"
+    },
+    "star_blade": {
+      "columns": 1,
+      "file": "weapons/star_blade.png",
+      "frameHeight": 48,
+      "frameWidth": 48,
+      "frames": 1,
+      "prompt": "prompts/weapons-pack.prompt.txt"
+    },
+    "starlight_lance": {
+      "columns": 1,
+      "file": "weapons/starlight_lance.png",
+      "frameHeight": 48,
+      "frameWidth": 48,
+      "frames": 1,
+      "prompt": "prompts/weapons-pack.prompt.txt"
+    },
+    "stone_plate": {
+      "columns": 1,
+      "file": "items/stone_plate.png",
+      "frameHeight": 24,
+      "frameWidth": 24,
+      "frames": 1,
+      "prompt": "prompts/armor-pack.prompt.txt"
+    },
+    "void_crystal": {
+      "columns": 1,
+      "file": "items/void_crystal.png",
+      "frameHeight": 24,
+      "frameWidth": 24,
+      "frames": 1,
+      "prompt": "prompts/supplies-pack.prompt.txt"
+    },
+    "void_edge": {
+      "columns": 1,
+      "file": "weapons/void_edge.png",
+      "frameHeight": 48,
+      "frameWidth": 48,
+      "frames": 1,
+      "prompt": "prompts/weapons-pack.prompt.txt"
+    },
+    "wolf_fang": {
+      "columns": 1,
+      "file": "items/wolf_fang.png",
+      "frameHeight": 24,
+      "frameWidth": 24,
+      "frames": 1,
+      "prompt": "prompts/supplies-pack.prompt.txt"
+    },
+    "wood_sword": {
+      "columns": 1,
+      "file": "weapons/wood_sword.png",
+      "frameHeight": 48,
+      "frameWidth": 48,
+      "frames": 1,
+      "prompt": "prompts/weapons-pack.prompt.txt"
+    }
+  },
+  "monsters": {
+    "beetle": {
+      "columns": 2,
+      "file": "monsters/beetle.png",
+      "frameHeight": 32,
+      "frameWidth": 32,
+      "frames": 4,
+      "prompt": "prompts/monster-beetle-idle.prompt.txt"
+    },
+    "eclipse_core": {
+      "columns": 3,
+      "file": "monsters/eclipse_core.png",
+      "frameHeight": 32,
+      "frameWidth": 32,
+      "frames": 9,
+      "prompt": "prompts/monster-eclipse-core-idle.prompt.txt"
+    },
+    "eclipse_golem": {
+      "columns": 3,
+      "file": "monsters/eclipse_golem.png",
+      "frameHeight": 32,
+      "frameWidth": 32,
+      "frames": 9,
+      "prompt": "prompts/monster-eclipse-golem-idle.prompt.txt"
+    },
+    "gargoyle": {
+      "columns": 2,
+      "file": "monsters/gargoyle.png",
+      "frameHeight": 32,
+      "frameWidth": 32,
+      "frames": 4,
+      "prompt": "prompts/monster-gargoyle-idle.prompt.txt"
+    },
+    "sentinel": {
+      "columns": 2,
+      "file": "monsters/sentinel.png",
+      "frameHeight": 32,
+      "frameWidth": 32,
+      "frames": 4,
+      "prompt": "prompts/monster-sentinel-idle.prompt.txt"
+    },
+    "shade": {
+      "columns": 2,
+      "file": "monsters/shade.png",
+      "frameHeight": 32,
+      "frameWidth": 32,
+      "frames": 4,
+      "prompt": "prompts/monster-shade-idle.prompt.txt"
+    },
+    "slime": {
+      "columns": 2,
+      "file": "monsters/slime.png",
+      "frameHeight": 32,
+      "frameWidth": 32,
+      "frames": 4,
+      "prompt": "prompts/monster-slime-idle.prompt.txt"
+    },
+    "slime_king": {
+      "columns": 3,
+      "file": "monsters/slime_king.png",
+      "frameHeight": 32,
+      "frameWidth": 32,
+      "frames": 9,
+      "prompt": "prompts/monster-slime-king-idle.prompt.txt"
+    },
+    "wolf": {
+      "columns": 2,
+      "file": "monsters/wolf.png",
+      "frameHeight": 32,
+      "frameWidth": 32,
+      "frames": 4,
+      "prompt": "prompts/monster-wolf-idle.prompt.txt"
+    },
+    "wolf_king": {
+      "columns": 3,
+      "file": "monsters/wolf_king.png",
+      "frameHeight": 32,
+      "frameWidth": 32,
+      "frames": 9,
+      "prompt": "prompts/monster-wolf-king-idle.prompt.txt"
+    },
+    "wraith": {
+      "columns": 2,
+      "file": "monsters/wraith.png",
+      "frameHeight": 32,
+      "frameWidth": 32,
+      "frames": 4,
+      "prompt": "prompts/monster-wraith-idle.prompt.txt"
+    }
+  },
+  "palette": [
+    "#0F380F",
+    "#306230",
+    "#8BAC0F",
+    "#9BBC0F"
+  ],
+  "tileEffects": {
+    "*": "arcane-pulse",
+    ":": "arcane-pulse",
+    "@": "arcane-pulse",
+    "E": "arcane-pulse",
+    "G": "arcane-pulse",
+    "M": "arcane-pulse",
+    "W": "water-ripple",
+    "^": "flame",
+    "l": "lava-bubble",
+    "m": "arcane-pulse",
+    "o": "flame",
+    "y": "water-ripple"
+  },
+  "tileSize": 16,
+  "tiles": {
+    "*": {
+      "columns": 1,
+      "file": "tiles/star-crystal.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-depths.prompt.txt"
+    },
+    ",": {
+      "columns": 1,
+      "file": "tiles/flower-grass.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-overworld.prompt.txt"
+    },
+    ".": {
+      "columns": 1,
+      "file": "tiles/grass.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-overworld.prompt.txt"
+    },
+    ":": {
+      "columns": 1,
+      "file": "tiles/star-bridge.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-depths.prompt.txt"
+    },
+    "<": {
+      "columns": 1,
+      "file": "tiles/stairs-down.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-town.prompt.txt"
+    },
+    ">": {
+      "columns": 1,
+      "file": "tiles/stairs-up.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-town.prompt.txt"
+    },
+    "@": {
+      "columns": 1,
+      "file": "tiles/portal.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-depths.prompt.txt"
+    },
+    "A": {
+      "columns": 1,
+      "file": "tiles/item-counter.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-town.prompt.txt"
+    },
+    "B": {
+      "columns": 1,
+      "file": "tiles/bush.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-overworld.prompt.txt"
+    },
+    "C": {
+      "columns": 1,
+      "file": "tiles/weapon-counter.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-town.prompt.txt"
+    },
+    "D": {
+      "columns": 1,
+      "file": "tiles/door.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-town.prompt.txt"
+    },
+    "E": {
+      "columns": 1,
+      "file": "tiles/core-altar.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-depths.prompt.txt"
+    },
+    "F": {
+      "columns": 1,
+      "file": "tiles/fence.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-overworld.prompt.txt"
+    },
+    "G": {
+      "columns": 1,
+      "file": "tiles/abyss-gate.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-depths.prompt.txt"
+    },
+    "H": {
+      "columns": 1,
+      "file": "tiles/wall.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-overworld.prompt.txt"
+    },
+    "L": {
+      "columns": 1,
+      "file": "tiles/lamp.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-town.prompt.txt"
+    },
+    "M": {
+      "columns": 1,
+      "file": "tiles/moon-altar.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-town.prompt.txt"
+    },
+    "O": {
+      "columns": 1,
+      "file": "tiles/well.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-town.prompt.txt"
+    },
+    "P": {
+      "columns": 1,
+      "file": "tiles/path.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-overworld.prompt.txt"
+    },
+    "R": {
+      "columns": 1,
+      "file": "tiles/roof-striped.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-town.prompt.txt"
+    },
+    "S": {
+      "columns": 1,
+      "file": "tiles/sign.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-town.prompt.txt"
+    },
+    "T": {
+      "columns": 1,
+      "file": "tiles/tree.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-overworld.prompt.txt"
+    },
+    "U": {
+      "columns": 1,
+      "file": "tiles/roof-crosshatched.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-town.prompt.txt"
+    },
+    "V": {
+      "columns": 1,
+      "file": "tiles/roof-chevron.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-town.prompt.txt"
+    },
+    "W": {
+      "columns": 1,
+      "file": "tiles/water.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-overworld.prompt.txt"
+    },
+    "Z": {
+      "columns": 1,
+      "file": "tiles/shrine-wall.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-depths.prompt.txt"
+    },
+    "^": {
+      "columns": 1,
+      "file": "tiles/campfire.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-town.prompt.txt"
+    },
+    "_": {
+      "columns": 1,
+      "file": "tiles/forest-floor.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-overworld.prompt.txt"
+    },
+    "b": {
+      "columns": 1,
+      "file": "tiles/bridge.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-overworld.prompt.txt"
+    },
+    "c": {
+      "columns": 1,
+      "file": "tiles/cave-wall.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-depths.prompt.txt"
+    },
+    "d": {
+      "columns": 1,
+      "file": "tiles/cave-floor.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-depths.prompt.txt"
+    },
+    "f": {
+      "columns": 1,
+      "file": "tiles/farm.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-overworld.prompt.txt"
+    },
+    "g": {
+      "columns": 1,
+      "file": "tiles/tall-grass.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-overworld.prompt.txt"
+    },
+    "k": {
+      "columns": 1,
+      "file": "tiles/forest-grass.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-overworld.prompt.txt"
+    },
+    "l": {
+      "columns": 1,
+      "file": "tiles/lava.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-depths.prompt.txt"
+    },
+    "m": {
+      "columns": 1,
+      "file": "tiles/meteor-ore.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-depths.prompt.txt"
+    },
+    "n": {
+      "columns": 1,
+      "file": "tiles/star-floor.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-depths.prompt.txt"
+    },
+    "o": {
+      "columns": 1,
+      "file": "tiles/torch.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-depths.prompt.txt"
+    },
+    "p": {
+      "columns": 1,
+      "file": "tiles/plaza.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-overworld.prompt.txt"
+    },
+    "q": {
+      "columns": 1,
+      "file": "tiles/shrine-floor.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-depths.prompt.txt"
+    },
+    "r": {
+      "columns": 1,
+      "file": "tiles/rock.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-overworld.prompt.txt"
+    },
+    "t": {
+      "columns": 1,
+      "file": "tiles/stump.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-town.prompt.txt"
+    },
+    "v": {
+      "columns": 1,
+      "file": "tiles/void.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-depths.prompt.txt"
+    },
+    "x": {
+      "columns": 1,
+      "file": "tiles/crate.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-town.prompt.txt"
+    },
+    "y": {
+      "columns": 1,
+      "file": "tiles/water-lily.png",
+      "frameHeight": 16,
+      "frameWidth": 16,
+      "frames": 1,
+      "prompt": "prompts/tiles-overworld.prompt.txt"
+    }
+  },
+  "version": "poketown.rgb.v1",
+  "weapons": {
+    "battle_axe": {
+      "columns": 1,
+      "file": "weapons/battle_axe.png",
+      "frameHeight": 48,
+      "frameWidth": 48,
+      "frames": 1,
+      "prompt": "prompts/weapons-pack.prompt.txt"
+    },
+    "copper_dagger": {
+      "columns": 1,
+      "file": "weapons/copper_dagger.png",
+      "frameHeight": 48,
+      "frameWidth": 48,
+      "frames": 1,
+      "prompt": "prompts/weapons-pack.prompt.txt"
+    },
+    "fang_blade": {
+      "columns": 1,
+      "file": "weapons/fang_blade.png",
+      "frameHeight": 48,
+      "frameWidth": 48,
+      "frames": 1,
+      "prompt": "prompts/weapons-pack.prompt.txt"
+    },
+    "flame_blade": {
+      "columns": 1,
+      "file": "weapons/flame_blade.png",
+      "frameHeight": 48,
+      "frameWidth": 48,
+      "frames": 1,
+      "prompt": "prompts/weapons-pack.prompt.txt"
+    },
+    "hero_sword": {
+      "columns": 1,
+      "file": "weapons/hero_sword.png",
+      "frameHeight": 48,
+      "frameWidth": 48,
+      "frames": 1,
+      "prompt": "prompts/weapons-pack.prompt.txt"
+    },
+    "hunters_bow": {
+      "columns": 1,
+      "file": "weapons/hunters_bow.png",
+      "frameHeight": 48,
+      "frameWidth": 48,
+      "frames": 1,
+      "prompt": "prompts/weapons-pack.prompt.txt"
+    },
+    "iron_sword": {
+      "columns": 1,
+      "file": "weapons/iron_sword.png",
+      "frameHeight": 48,
+      "frameWidth": 48,
+      "frames": 1,
+      "prompt": "prompts/weapons-pack.prompt.txt"
+    },
+    "long_spear": {
+      "columns": 1,
+      "file": "weapons/long_spear.png",
+      "frameHeight": 48,
+      "frameWidth": 48,
+      "frames": 1,
+      "prompt": "prompts/weapons-pack.prompt.txt"
+    },
+    "moon_blade": {
+      "columns": 1,
+      "file": "weapons/moon_blade.png",
+      "frameHeight": 48,
+      "frameWidth": 48,
+      "frames": 1,
+      "prompt": "prompts/weapons-pack.prompt.txt"
+    },
+    "star_blade": {
+      "columns": 1,
+      "file": "weapons/star_blade.png",
+      "frameHeight": 48,
+      "frameWidth": 48,
+      "frames": 1,
+      "prompt": "prompts/weapons-pack.prompt.txt"
+    },
+    "starlight_lance": {
+      "columns": 1,
+      "file": "weapons/starlight_lance.png",
+      "frameHeight": 48,
+      "frameWidth": 48,
+      "frames": 1,
+      "prompt": "prompts/weapons-pack.prompt.txt"
+    },
+    "void_edge": {
+      "columns": 1,
+      "file": "weapons/void_edge.png",
+      "frameHeight": 48,
+      "frameWidth": 48,
+      "frames": 1,
+      "prompt": "prompts/weapons-pack.prompt.txt"
+    },
+    "wood_sword": {
+      "columns": 1,
+      "file": "weapons/wood_sword.png",
+      "frameHeight": 48,
+      "frameWidth": 48,
+      "frames": 1,
+      "prompt": "prompts/weapons-pack.prompt.txt"
+    }
+  }
+}

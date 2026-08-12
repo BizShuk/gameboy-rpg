@@ -1,0 +1,11 @@
+Use case: stylized-concept
+Asset type: production 2D game ambient terrain FX sprite sheet
+Primary request: Create one original four-frame looping water-ripple overlay sprite sheet for a top-down late-1990s four-shade handheld monster-catching RPG map.
+Input images: The provided town screenshot is a style and scale reference only; do not reproduce its scene, UI, characters, or map layout.
+Scene/backdrop: perfectly flat solid #FF00FF chroma-key background.
+Subject: exactly four compact water-ripple highlight overlays, one per cell, showing calm loop phases: settle, ripple begins, ripple expands, return to settle. The overlay must contain only ripple highlights and tiny foam pixels; no baked water tile, no square tile plate, no shoreline, no shadow.
+Style/medium: crisp low-resolution pixel art, original Game Boy-era visual language, hard 1-pixel-like clusters, no antialiasing, no gradients, no dithering noise.
+Composition/framing: exact 2x2 grid of four equal invisible cells; same centered top-down footprint and scale in every frame; subject fills about 45% of each cell; generous magenta margin on all four sides; no visible grid lines, borders, labels, or frames.
+Color palette: monochrome black, dark gray, light gray, and white subject pixels only; background exclusively #FF00FF.
+Constraints: every ripple must fit fully inside its cell; no pixel may cross a cell edge; same identity and width in all frames; seamless loop order left-to-right then next row; no detached debris beyond the compact ripple; no text, UI, watermark, logo, lighting, texture, or background variation.
+Avoid: characters, creatures, scenery, realistic water, 3D rendering, painterly effects, translucency, blur, glow halos, perspective floor art.

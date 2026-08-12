@@ -4,6 +4,7 @@
   "private": true,
   "description": "Pokemon Red/Blue 復古風格的多人連線動作 RPG demo",
   "scripts": {
+    "art:build": "python3 scripts/build_rgb_assets.py",
     "dev": "go run ./cmd/gameboy-rpg",
     "test": "go test ./...",
     "build": "go build -o bin/gameboy-rpg ./cmd/gameboy-rpg",

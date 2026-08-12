@@ -1,0 +1,11 @@
+Create one 4 by 4 compact item-icon sheet containing 16 separate original armor and wearable objects for a top-down monster-taming action RPG. Use the visible overworld tileset as the exact four-value monochrome Game Boy pixel-art, outline, scale, and material-language reference. Evoke the late-1990s Pokémon Red, Blue, and Green era without copying any existing item.
+
+Use the visible 4x4 guide only for equal invisible square cells, centering, and safe padding. Never reproduce guide boxes, marks, labels, or separators.
+
+Exact cells, left to right:
+Row 1: folded cloth tunic; leather vest; chain-mail shirt; iron chest armor.
+Row 2: dragon-scale cuirass; shell-plated armor; crescent moon ward shield; radiant dawn aegis shield.
+Row 3: heavy stone plate; eclipse crown; small round buckler; travel cloak.
+Row 4: sturdy boots; leather gloves; plain helmet; simple protective ring.
+
+Exactly 16 compact icons, each centered and fully contained in the central 68% of its cell with no cast shadow or floor. Perfectly flat solid #FF00FF background; do not use magenta in the objects. Crisp hard pixels, no antialiasing, gradients, color, text, UI, characters, labels, logos, or watermark.

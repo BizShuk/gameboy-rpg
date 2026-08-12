@@ -6,6 +6,7 @@ Pokemon 風格多人連線動作 RPG demo。業務定義與玩法見 `README.md`
 
 ```tree
 gameboy-rpg/
+├── art/rgb/                # Game Boy visual source、prompt provenance 與 strict-QC outputs
 ├── cmd/gameboy-rpg/main.go  # 進入點：gosdk config → 組裝 store→World→Hub→HTTP
 ├── run.sh                   # 建 metadata 目錄 + build + 執行 (pm2 script)
 ├── ecosystem.config.js      # pm2 常駐設定 (Go 版 pm2, 路徑字面值)
@@ -32,14 +33,16 @@ gameboy-rpg/
 │   ├── client.go            # gorilla/websocket 讀寫 pump
 │   ├── http.go              # 路由：靜態檔 + /ws upgrade
 │   └── integration_test.go  # httptest + ws client 端到端測試
+├── scripts/
+│   └── build_rgb_assets.py  # 重建 canonical four-shade runtime asset bundle
 ├── web/
 │   ├── embed.go             # go:embed 靜態資源
 │   └── static/              # client (無外部依賴, 全 vanilla)
-│       ├── iso/             # 等角視界 client (map_generator bundle 產物, 見決策 16)
-│       ├── assets/          # 等角皮膚資產 (tileset/materials, map_generator 同步)
+│       ├── assets/rgb/      # terrain、actors、monsters、items、effects 與 manifest
+│       ├── art.js           # canonical asset registry、frame extraction 與 tile drawing
 │       ├── index.html       # canvas + join/shop/toast overlay
 │       ├── style.css        # DOM overlay 樣式
-│       └── client.js        # 渲染/netcode/輸入/特效 (string-art pixel sprites)
+│       └── client.js        # gameplay rendering/netcode/input/effects
 └── docs/                    # terminology 與 memory
 ```
 
@@ -55,14 +58,10 @@ gameboy-rpg/
   init 直送 client 渲染；寬度錯誤啟動即 panic 並有測試。
   safe zone 為 tile 矩形 (圍籬內側)，怪物移動時硬性禁入。tile 字元清單見
   `map.go` 檔頭註解 (廣場/水井/路燈/橋/農田等裝飾各有專屬字元)。
-- `決策 16 — 等角視界 client (2026-08-04)`：`web/static/iso/` 是第二個 client
-  (與 string-art 版並存,join 畫面互連)。由 `../map_generator` 的
-  `apps/game1-client` (PixiJS + IsoRenderer + 皮膚鏈 + 生成素材) esbuild bundle
-  而來,走同一條 `/ws` 協議與 20Hz 快照;rows 經 `fromGame1Rows` 反向還原成
-  MapDocument 做等角渲染,實體為 procedural billboard。此 client 例外於
-  「決策 4 零資產檔」:皮膚資產 (tileset/materials/portal.gif) 隨 embed 打包於
-  `web/static/assets/`。再生:map_generator 內 `node apps/game1-client/build.mjs`
-  → 重建 gameboy-rpg。
+- `決策 16 — 單一 Game Boy visual client (2026-08-12)`：產品只有一個 playable
+  client；terrain、角色與所有 gameplay objects 共用同一個 four-shade visual
+  language。第二套 renderer 與替代 asset path 已移除，避免同一世界出現互相衝突的
+  presentation semantics。
 - `決策 15 — 地圖資料由 map_generator 生成 (2026-08-04)`：`game/map_gen.go` 是
   `../map_generator` 的 `/api/generate/game1?format=gofile` 產物 (seed `g1-std`,
   56x120)，含 `mapRows`、`dungeonTopRow`/`voidTopRow`、`Portals` (深淵門
@@ -73,8 +72,14 @@ gameboy-rpg/
   (指令見該檔檔頭)，測試已全面改為生成資料驅動 (BFS 通路 / TilesOf 掃描,
   不寫死座標)。`spawnMonster` 增加安全區禁生格判斷；init 下行新增
   `dtop`/`vtop`，client 層界改 init 驅動 (fallback 64/88)。
-- `決策 4 — client 零資產檔`：所有 sprite 為 client.js 內 string-art，tile
-  由程式繪製進 offscreen atlas；無圖檔、無外部字型/CDN，單 binary 全內嵌。
+- `決策 4 — generated RGB asset bundle`：`art/rgb/source/` 保存 image-generation
+  source 與 exact prompt，`art/rgb/processed/` 保存 strict-QC outputs；
+  `npm run art:build` 產生 `assets/rgb/manifest.json` 所擁有的 runtime bundle。
+  runtime images 僅允許 Game Boy 四階 palette 與 binary alpha；所有 ASCII tile、
+  actor、monster、weapon、armor、consumable/material 與 authored FX 都必須有
+  manifest entry；動態 terrain 由 tile-to-effect binding 驅動，Player sheet 同步
+  交付四方向 strips/GIFs。缺少 asset 時 client 直接拒絕進場，不提供 procedural
+  fallback。
 - `決策 5 — 設定走 gosdk config.Default`：`cmd` 啟動時
   `config.Default(config.WithAppName("gameboy-rpg"))`，優先序
   `flag > APP_* 環境變數 > ~/.config/gameboy-rpg/*.yaml > viper 內建預設`；
@@ -100,6 +105,8 @@ gameboy-rpg/
   `實際位移距離`推進 `animT` (速度快=步頻快, haste/狼追擊自動加速)，
   待機動畫用 `now + id 偏移` 錯開相位。受擊白閃靠 hit event 的目標 `id` +
   sprite 白色剪影 cache；武器揮舞是獨立 sprite 沿弧線旋轉，非身體幀。
+  水面、火焰、熔岩、arcane terrain、召喚/消散與煙火使用 manifest-authored FX；
+  可變半徑 telegraph 與數字文字維持 gameplay geometry/UI rendering。
 
 - `決策 9 — 距離以人物單位 (unit) 標準化`：`game/map.go` 定義
   `Unit = TileSize` (1 unit = 一個人物寬 = 1 tile)。所有 gameplay 數值

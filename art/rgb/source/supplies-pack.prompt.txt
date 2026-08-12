@@ -1,0 +1,7 @@
+Edit the visible 4x4 supplies and materials sprite sheet while preserving the same 16 object identities, same cell order, same original pixel-art designs, and the four-value monochrome late-1990s Game Boy RPG style.
+
+Geometry correction is mandatory: uniformly reduce every object so its full silhouette fits inside the central 52% width and central 52% height of its own cell. Center each object on the exact cell center. Leave at least 20% uninterrupted flat magenta padding on every side of every object. No pixel belonging to an object may enter the outer 18% border of a cell. Do not let any object touch or approach a cell boundary.
+
+Keep exactly four rows and four columns in the same order: healing bottle, large healing bottle, wing-marked haste flask, fist-marked power tonic; gel vial, shell fragment, fang, meteor shard; void crystal, coins, key, scroll; bread, herbs, crystal-dust pouch, empty vial.
+
+Use the visible 4x4 guide only as invisible slot geometry. Do not reproduce boxes, marks, labels, borders, or separators. Perfectly flat uniform #FF00FF background with no gradients or texture. Remove all magenta from inside the objects, especially the bottom-right vial: its interior must be empty light gray, not magenta. No floor, cast shadows, detached sparkles, antialiasing, gradients, color, text, UI, logo, or watermark.

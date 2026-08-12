@@ -1,0 +1,11 @@
+Use case: stylized-concept
+Asset type: production 2D game ambient terrain FX sprite sheet
+Primary request: Create one original four-frame looping arcane pulse overlay sprite sheet for altars, gates, portals, crystals, meteor ore, and star paths in a top-down late-1990s four-shade handheld monster-catching RPG.
+Input images: The provided town screenshot is a style and scale reference only; do not reproduce its scene, UI, characters, or map layout.
+Scene/backdrop: perfectly flat solid #FF00FF chroma-key background.
+Subject: exactly four compact arcane pulse overlays, one per cell, showing: dim four-point glyph, small radiant pulse, peak crystalline sparkle ring, settled glyph. Only an abstract symmetric glyph, short rays, and tightly attached spark pixels; no altar, gate, portal disc, crystal body, ore rock, floor tile, circle plate, shadow, or baked scenery.
+Style/medium: crisp low-resolution pixel art, original Game Boy-era visual language, hard pixel clusters, no antialiasing, no gradients, no dithering noise.
+Composition/framing: exact 2x2 grid of four equal invisible cells; same centered top-down footprint and scale; subject fills about 48% of each cell; generous magenta margin; no visible grid lines, borders, labels, or frames.
+Color palette: monochrome black, dark gray, light gray, and white subject pixels only; background exclusively #FF00FF.
+Constraints: every ray and sparkle fits fully inside its cell; nothing crosses a cell edge; seamless order left-to-right then next row; no text, UI, watermark, logo, lighting, texture, or background variation.
+Avoid: characters, scenery, religious symbols, copyrighted emblems, realistic VFX, 3D, painterly effects, translucency, blur, glow halos, baked ground or perspective floor art.

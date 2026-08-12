@@ -1,0 +1,301 @@
+{
+  "target": "creature",
+  "mode": "idle",
+  "prompt": "",
+  "role": "",
+  "input": "/Users/shuk/projects/game/gameboy-rpg/art/rgb/source/monster-wraith-idle.raw.png",
+  "threshold": 100,
+  "edge_threshold": 150,
+  "duration": 200,
+  "rows": 2,
+  "cols": 2,
+  "cell_size": 32,
+  "fit_scale": 0.8,
+  "trim_border": 4,
+  "edge_clean_depth": 3,
+  "align": "bottom",
+  "shared_scale": true,
+  "scale_strategy": "fit",
+  "component_mode": "largest",
+  "component_padding": 0,
+  "min_component_area": 1,
+  "edge_touch_margin": 0,
+  "frame_labels": [
+    "idle-1",
+    "idle-2",
+    "idle-3",
+    "idle-4"
+  ],
+  "frames": [
+    {
+      "grid": [
+        0,
+        0
+      ],
+      "source_box": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "component_mode": "largest",
+      "component_count": 1,
+      "selected_component_area": 83202,
+      "selected_component_bbox": [
+        108,
+        107,
+        511,
+        538
+      ],
+      "crop_bbox": [
+        108,
+        107,
+        511,
+        538
+      ],
+      "source_frame_size": [
+        619,
+        619
+      ],
+      "is_empty": false,
+      "subject_area": 83202,
+      "body_core_area": 73192,
+      "body_area_fraction": 0.1910215288090385,
+      "anchor_source": [
+        308.0,
+        488.0
+      ],
+      "source_edge_touch": false,
+      "output_edge_touch": false,
+      "edge_touch": false,
+      "output_size": [
+        23,
+        25
+      ],
+      "paste_position": [
+        4,
+        4
+      ],
+      "paste_clamped": false,
+      "aligned_bbox": [
+        4,
+        4,
+        27,
+        29
+      ],
+      "source_to_output_scale": 0.05939675174013921,
+      "bbox_scale_applied": true,
+      "scale_strategy": "fit",
+      "scale_changed": true
+    },
+    {
+      "grid": [
+        0,
+        1
+      ],
+      "source_box": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "component_mode": "largest",
+      "component_count": 1,
+      "selected_component_area": 73551,
+      "selected_component_bbox": [
+        159,
+        107,
+        460,
+        538
+      ],
+      "crop_bbox": [
+        159,
+        107,
+        460,
+        538
+      ],
+      "source_frame_size": [
+        619,
+        619
+      ],
+      "is_empty": false,
+      "subject_area": 73551,
+      "body_core_area": 73551,
+      "body_area_fraction": 0.19195847176513267,
+      "anchor_source": [
+        308.0,
+        492.0
+      ],
+      "source_edge_touch": false,
+      "output_edge_touch": false,
+      "edge_touch": false,
+      "output_size": [
+        17,
+        25
+      ],
+      "paste_position": [
+        7,
+        4
+      ],
+      "paste_clamped": false,
+      "aligned_bbox": [
+        7,
+        4,
+        24,
+        29
+      ],
+      "source_to_output_scale": 0.05939675174013921,
+      "bbox_scale_applied": true,
+      "scale_strategy": "fit",
+      "scale_changed": true
+    },
+    {
+      "grid": [
+        1,
+        0
+      ],
+      "source_box": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "component_mode": "largest",
+      "component_count": 1,
+      "selected_component_area": 82997,
+      "selected_component_bbox": [
+        108,
+        107,
+        511,
+        538
+      ],
+      "crop_bbox": [
+        108,
+        107,
+        511,
+        538
+      ],
+      "source_frame_size": [
+        619,
+        619
+      ],
+      "is_empty": false,
+      "subject_area": 82997,
+      "body_core_area": 73025,
+      "body_area_fraction": 0.1905856806929724,
+      "anchor_source": [
+        309.0,
+        488.0
+      ],
+      "source_edge_touch": false,
+      "output_edge_touch": false,
+      "edge_touch": false,
+      "output_size": [
+        23,
+        25
+      ],
+      "paste_position": [
+        4,
+        4
+      ],
+      "paste_clamped": false,
+      "aligned_bbox": [
+        4,
+        4,
+        27,
+        29
+      ],
+      "source_to_output_scale": 0.05939675174013921,
+      "bbox_scale_applied": true,
+      "scale_strategy": "fit",
+      "scale_changed": true
+    },
+    {
+      "grid": [
+        1,
+        1
+      ],
+      "source_box": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "component_mode": "largest",
+      "component_count": 1,
+      "selected_component_area": 82933,
+      "selected_component_bbox": [
+        108,
+        107,
+        511,
+        538
+      ],
+      "crop_bbox": [
+        108,
+        107,
+        511,
+        538
+      ],
+      "source_frame_size": [
+        619,
+        619
+      ],
+      "is_empty": false,
+      "subject_area": 82933,
+      "body_core_area": 72870,
+      "body_area_fraction": 0.19018115100440808,
+      "anchor_source": [
+        308.0,
+        488.0
+      ],
+      "source_edge_touch": false,
+      "output_edge_touch": false,
+      "edge_touch": false,
+      "output_size": [
+        23,
+        25
+      ],
+      "paste_position": [
+        4,
+        4
+      ],
+      "paste_clamped": false,
+      "aligned_bbox": [
+        4,
+        4,
+        27,
+        29
+      ],
+      "source_to_output_scale": 0.05939675174013921,
+      "bbox_scale_applied": true,
+      "scale_strategy": "fit",
+      "scale_changed": true
+    }
+  ],
+  "edge_touch_frames": [],
+  "source_edge_touch_frames": [],
+  "output_edge_touch_frames": [],
+  "empty_frames": [],
+  "paste_clamped_frames": [],
+  "qc_summary": {
+    "frame_count": 4,
+    "valid_frame_count": 4,
+    "empty_count": 0,
+    "edge_touch_count": 0,
+    "paste_clamped_count": 0,
+    "body_scale_mean": 0.4369623980194022,
+    "output_subject_height_mean": 25.0,
+    "body_scale_cv": 0.0017289889501934442,
+    "anchor_x_std": 0.0006995358673541544,
+    "anchor_y_std": 0.0027981434694166175,
+    "anchor_y_mean": 0.789983844911147
+  },
+  "qc_config": {
+    "strict_qc": true,
+    "reject_edge_touch": false,
+    "allow_source_edge_touch": false,
+    "max_body_scale_cv": null,
+    "max_anchor_y_std": null,
+    "max_profile_scale_drift": null
+  }
+}

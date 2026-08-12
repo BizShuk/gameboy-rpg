@@ -1,0 +1,11 @@
+Create an original 4 by 4 tileset atlas for the town and interactable architecture of a top-down monster-taming RPG. Match the exact four-shade monochrome Game Boy pixel-art language of the visible overworld tileset reference, inspired by the late-1990s Pokémon Red, Blue, and Green era without copying any existing building or tile.
+
+Use the visible overworld atlas as the art, palette-value, camera, outline, pixel-cluster, and scale reference. Use the visible layout guide only for 4 rows, 4 columns, equal invisible square slots, and safe padding. Never reproduce guide boxes, labels, borders, separators, or marks.
+
+Exact cells, left to right:
+Row 1: striped shop roof tile; crosshatched shop roof tile; chevron workshop roof tile; dark doorway tile.
+Row 2: wooden signpost; weapon-shop counter; item-shop counter; round stone town well.
+Row 3: old-fashioned street lamp; wooden supply crate; cut tree stump; moon-crystal shrine altar.
+Row 4: stairs descending; stairs ascending; compact campfire; plain grass backup tile.
+
+Strictly four values, crisp hard pixels, compact 16x16-tile logic, no antialiasing, no gradients, no color, no modern lighting, no isometric perspective. Exactly 16 designs. Each object must be fully contained and readable after reduction to 16 by 16 pixels. Roof and architecture pieces must tile cleanly. No characters, creatures, text, letters, numbers, UI, labels, logos, or watermark.
